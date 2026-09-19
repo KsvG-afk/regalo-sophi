@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi mona hermosa ❤️</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================== */
+
+        body {
+            background-color: black;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            color: pink;
+            text-align: center;
+            font-size: 60px;
+            text-shadow: 0 0 15px pink;
+        }
+
+        h2 {
+            color: pink;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 0 0 15px pink;
+        }
+
+        p {
+            color: pink;
+            text-shadow: 0 0 15px pink;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           CORAZONES DECORATIVOS
+        ========================== */
+
+        .corazon1 {
+            font-size: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            animation: float 4s infinite;
+        }
+
+        .corazon2 {
+            font-size: 50px;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            animation: float 4s infinite;
+        }
+
+        .corazon3 {
+            font-size: 30px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            animation: float 4s infinite;
+        }
+
+        .corazon4 {
+            font-size: 30px;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            animation: float 4s infinite;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================== */
+
+        .seccion {
+            min-height: 100vh;
+            padding: 200px 20px;
+            text-align: center;
+        }
+
+        .seccion h2 {
+            margin-top: 250px;
+        }
+
+
+        /* =========================
+           IMÁGENES / BOTONES
+        ========================== */
+
+        .imagen-boton {
+            text-align: center;
+            margin: 80px 0;
+            cursor: pointer;
+        }
+
+        .imagen-boton img {
+            width: 220px;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-boton img:hover {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           POEMAS
+        ========================== */
+
+        .poema {
+            display: none;
+
+            max-width: 700px;
+
+            margin: 30px auto 80px auto;
+
+            padding: 25px;
+
+            border: 1px solid pink;
+
+            border-radius: 20px;
+
+            animation: aparecer 1s ease;
+        }
+
+        .poema p {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           BOTÓN DE FLORES
+        ========================== */
+
+        .flores {
+            font-size: 60px;
+
+            margin-top: 100px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition: transform 0.3s;
+        }
+
+        .flores:hover {
+            transform: scale(1.15);
+        }
+
+
+        /* =========================
+           FLORES REALES
+        ========================== */
+
+        .sorpresa-flores {
+
+            display: none;
+
+            text-align: center;
+
+            margin-top: 80px;
+
+            animation: aparecer 1.5s ease;
+        }
+
+        .flores-juntas {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .flores-juntas img {
+
+            width: 250px;
+
+            height: auto;
+
+            border-radius: 15px;
+        }
+
+        .frase-flores {
+
+            margin-top: 30px;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CORAZÓN FINAL
+        ========================== */
+
+        .corazon-final {
+
+            margin-top: 150px;
+
+            margin-bottom: 100px;
+
+            text-align: center;
+        }
+
+        .corazon-final button {
+
+            background: none;
+
+            border: none;
+
+            font-size: 80px;
+
+            cursor: pointer;
+
+            animation: latido 1.5s infinite;
+        }
+
+        .corazon-final button:hover {
+
+            transform: scale(1.15);
+        }
+
+
+        /* =========================
+           ANIMACIONES
+        ========================== */
+
+        @keyframes latido {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+        }
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(40px)
+                    scale(0.8);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            .seccion {
+                padding: 120px 10px;
+            }
+
+            .seccion h2 {
+                margin-top: 180px;
+            }
+
+            .imagen-boton img {
+                width: 200px;
+            }
+
+            .poema {
+                padding: 20px;
+            }
+
+            .poema p {
+                font-size: 17px;
+            }
+
+            .flores {
+                font-size: 50px;
+            }
+
+            .flores-juntas img {
+                width: 200px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         CORAZONES DECORATIVOS
+    ================================== -->
+
+    <div class="corazon1">❤️</div>
+
+    <div class="corazon2">❤️</div>
+
+    <div class="corazon3">❤️</div>
+
+    <div class="corazon4">❤️</div>
+
+
+
+    <section class="seccion">
+
+
+        <!-- =================================
+             INICIO
+        ================================== -->
+
+        <h1>
+            Te amo mucho mi amor ❤️
+        </h1>
+
+        <p>
+            Una pequeña sorpresa para una pequeña damisela
+        </p>
+
+
+
+        <!-- =================================
+             HARRY POTTER
+        ================================== -->
+
+        <div
+            class="imagen-boton"
+            onclick="mostrarPoema('poemaHarry')"
+        >
+
+            <img src="harry.webp">
+
+        </div>
+
+
+        <div
+            class="poema"
+            id="poemaHarry"
+        >
+
+            <p>
+
+                Al igual que Harry Potter, tu belleza deslumbra cada que vienes a mi casa.
+                En un parpadear de ojos, deslumbras mi mirada, es posible ver tu magia y
+                cómo me enamora con el pasar de tus ojos cafés, que desvelan los sueños y
+                comienzo a pensar en tu mirada.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             PRIMER MENSAJE
+        ================================== -->
+
+        <h2>
+            Hay algo que quiero decirte
+        </h2>
+
+        <p>
+
+            Desde que te conocí, mi vida ha cambiado en todos los sentidos,
+            tú le das un propósito a mi ser.
+
+        </p>
+
+
+
+        <!-- =================================
+             THE LAST OF US
+        ================================== -->
+
+        <div
+            class="imagen-boton"
+            onclick="mostrarPoema('poemaLast')"
+        >
+
+            <img src="thelast.webp">
+
+        </div>
+
+
+        <div
+            class="poema"
+            id="poemaLast"
+        >
+
+            <p>
+
+                Tu vida para mí significa lo mismo que para Joel la de Sarah,
+                aunque aún no estemos casados y no vivamos juntos. Yo considero
+                que ya somos una familia en proceso, y es por ese proceso que
+                considero darte el mundo entero.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             SEGUNDO MENSAJE
+        ================================== -->
+
+        <h2>
+
+            Me gustan nuestros momentos juntos, nuestras risas
+            y sobre todo nuestros fluidos
+
+        </h2>
+
+        <p>
+            Te amuuuuuuuuuuuuuu
+        </p>
+
+
+
+        <!-- =================================
+             OREO
+        ================================== -->
+
+        <div
+            class="imagen-boton"
+            onclick="mostrarPoema('poemaOreo')"
+        >
+
+            <img src="oreo.webp">
+
+        </div>
+
+
+        <div
+            class="poema"
+            id="poemaOreo"
+        >
+
+            <p>
+
+                Al igual que tu amor por las Oreos, yo me derrito dulcemente
+                porque al fin encontré un amor verdadero en el cual dar todo mi amor.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             TERCER MENSAJE
+        ================================== -->
+
+        <h2>
+
+            Todavía falta mucho por vivir juntos mi mona
+
+        </h2>
+
+        <p>
+
+            Mi mona, te amo con todo mi corazón y quiero que todos los días
+            recuerdes que mi amor por ti es más grande que el universo.
+
+        </p>
+
+
+
+        <!-- =================================
+             MANGO
+        ================================== -->
+
+        <div
+            class="imagen-boton"
+            onclick="mostrarPoema('poemaMango')"
+        >
+
+            <img src="mango.webp">
+
+        </div>
+
+
+        <div
+            class="poema"
+            id="poemaMango"
+        >
+
+            <p>
+
+                Al darme cuenta de que te gustaba el mango, fue igual que cuando
+                correspondías a mis encantos. Tú me demostraste en poco tiempo lo
+                que nadie había hecho, y agradezco que seas la que hace olvidarme
+                de lo malo.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             CUARTO MENSAJE
+        ================================== -->
+
+        <h2>
+
+            Por último quiero decirte que.....
+
+        </h2>
+
+        <p>
+
+            Te amo con toda mi alma y quiero pasar el resto de mis días
+            contigo amor.
+
+        </p>
+
+
+
+        <!-- =================================
+             ABOLALA
+        ================================== -->
+
+        <div
+            class="imagen-boton"
+            onclick="mostrarPoema('poemaAbolala')"
+        >
+
+            <img src="abolala.webp">
+
+        </div>
+
+
+        <div
+            class="poema"
+            id="poemaAbolala"
+        >
+
+            <p>
+
+                Prefiero defenderte a costa de mi propia vida, porque sé que mi
+                abogada ayudará a los que más necesitan. Tú serás la mejor en tu
+                profesión y, aunque las cosas vayan a ser duras, mi abogada nunca
+                se rendirá y su cliente favorito nunca la dejará de apoyar.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             FINAL DE LOS POEMAS
+        ================================== -->
+
+        <h2>
+
+            Y como ya estamos llegando al final.
+
+        </h2>
+
+        <p>
+
+            Espero que te encante el regalo mi amor.
+
+        </p>
+
+
+
+        <!-- =================================
+             BOTÓN DE LAS FLORES
+        ================================== -->
+
+        <div
+            class="flores"
+            id="flores"
+        >
+
+            🌻 🌻 🌻
+
+        </div>
+
+
+
+        <!-- =================================
+             SORPRESA DE LAS FLORES
+        ================================== -->
+
+        <div
+            class="sorpresa-flores"
+            id="sorpresaFlores"
+        >
+
+
+            <div class="flores-juntas">
+
+                <img src="flores1.webp">
+                <img src="flores1.webp">
+                <img src="flores1.webp">
+                <img src="flores1.webp">
+
+            </div>
+
+
+            <p class="frase-flores">
+
+                Estas flores son para recordarte que, incluso en los días
+                más difíciles, siempre habrá algo bonito esperando florecer. 🌻❤️
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================
+             CORAZÓN FINAL
+        ================================== -->
+
+        <div class="corazon-final">
+
+            <button
+                id="botonFinal"
+                onclick="abrirPDF()"
+            >
+
+                ❤️
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script>
+
+
+        /* =========================
+           MOSTRAR / OCULTAR POEMAS
+        ========================== */
+
+        function mostrarPoema(id) {
+
+            const poema =
+                document.getElementById(id);
+
+
+            if (poema.style.display === "block") {
+
+                poema.style.display = "none";
+
+            }
+
+            else {
+
+                poema.style.display = "block";
+
+            }
+
+        }
+
+
+
+        /* =========================
+           BOTÓN DE LAS FLORES
+        ========================== */
+
+        const flores =
+            document.getElementById("flores");
+
+
+        const sorpresaFlores =
+            document.getElementById("sorpresaFlores");
+
+
+        flores.addEventListener(
+            "click",
+            function() {
+
+                sorpresaFlores.style.display = "block";
+
+                flores.style.pointerEvents = "none";
+
+            }
+        );
+
+
+
+        /* =========================
+           CORAZÓN FINAL
+        ========================== */
+
+        function abrirPDF() {
+
+            window.open("mimona.pdf", "_blank");
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
